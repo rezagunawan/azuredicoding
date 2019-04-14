@@ -34,9 +34,9 @@
 		sqlsrv_free_stmt($getResults);
 
 		if($getResults){
-		header("location:index.php");
+			header("location:index.php");
 		}else{
-			echo "Gagal";
+			// echo "Gagal";
 		}
 	}
 
