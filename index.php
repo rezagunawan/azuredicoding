@@ -9,7 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=rezalearnblob;AccountKey=J34FaItaqiGGP7E1blJu0laQK2TvsZxcleiaLIy2kIs/+lB26FX+9zuA1ruHVn3J20dqO9UZKa118K8thJdd9A==;";
-$containerName = "blobrizqi";
+$containerName = "rezalearnblob";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
