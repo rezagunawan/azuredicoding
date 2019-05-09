@@ -1,5 +1,5 @@
 <?php
-// require_once 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 require_once "./random_string.php";
 
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
 	// echo fread($content, filesize($fileToUpload));
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	header("Location: analyze.php");
+	// header("Location: analyze.php");
 }
 $listBlobsOptions = new ListBlobsOptions();
 $listBlobsOptions->setPrefix("");
