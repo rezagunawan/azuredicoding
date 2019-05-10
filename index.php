@@ -99,19 +99,10 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
             foreach ($result->getBlobs() as $blob)
             {
               ?>
-              <tr>
-                <td><?php echo $blob->getName() ?></td>
-                <td><?php echo $blob->getUrl() ?></td>
-                <td>
-                  <form action="computervision.php" method="post">
-                    <input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
-                    <input type="submit" name="submit" value="Analyze!" class="btn btn-primary">
-                  </form>
-                </td>
-              </tr>
-              <div class="col-md-6 col-lg-4">
+              
+              <div class="col-md-6 col-lg-4" style="margin-bottom: 10px">
 
-                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                <a class="portfolio-item d-block mx-auto" style="margin-bottom: 10px" href="#">
                   <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                       <i class="fas fa-search-plus fa-3x"></i>
@@ -120,6 +111,11 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
                   <img class="img-fluid" src="<?php echo $blob->getUrl() ?>" alt="">
 
                 </a>
+                <form action="computervision.php" method="post">
+                    <input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
+                    <input type="submit" name="submit" value="Apa Ini!" class="btn btn-primary">
+                  </form>
+
               </div>
               <?php
             }
@@ -154,7 +150,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
           <h4>Total Hewan yang diketahui : <?php echo sizeof($result->getBlobs())?></h4>
         </div>
         <div class="col-lg-4 mr-auto">
-          <p class="lead">Setelah Upload tinggal Klik tombol kaca pembesar, Maka Computer Vision akan mencari tau hewan apa ini</p>
+          <p class="lead">Setelah Upload tinggal Klik tombol <b>APA INI</b>, Maka Computer Vision akan mencari tau hewan apa ini</p>
         </div>
       </div>
       <div class="text-center mt-4">
@@ -173,27 +169,12 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
       <hr class="star-dark mb-5">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+         
           <form class="sentMessage d-flex justify-content-lefr" action="index.php" method="post" enctype="multipart/form-data">
             <input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
             <input type="submit" class="btn btn-primary btn-xl" id="sendMessageButton" name="submit" value="Upload">
           </form>
-          <!-- <form name="sentMessage" id="contactForm" novalidate="novalidate">
           
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <br>
-            <div id="success"></div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
-            </div>
-          </form> -->
         </div>
       </div>
     </div>
@@ -263,7 +244,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
   <!-- Portfolio Modals -->
 
   <!-- Portfolio Modal 1 -->
-  <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+  <!-- <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
     <div class="portfolio-modal-dialog bg-white">
       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
         <i class="fa fa-3x fa-times"></i>
@@ -282,7 +263,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
