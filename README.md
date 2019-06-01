@@ -9,4 +9,6 @@ Tugas Submission
 
 <br>
 
+Boleh digunakan sebagai referensi, tetapi jangan dipake langsung buat submission ya guys !
+
 
